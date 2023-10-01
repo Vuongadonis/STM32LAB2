@@ -1,0 +1,8 @@
+/*
+ * code7seg.c
+ *
+ *  Created on: Oct 1, 2023
+ *      Author: Acer
+ */
+
+#include "code7seg.h"
