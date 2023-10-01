@@ -694,3 +694,17 @@
 2023-10-02 00:44:17,789 [INFO] ProjectBuilder:4505 - Time for Generating toolchain IDE Files: 2653mS.
 2023-10-02 00:44:17,792 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 1mS.
 2023-10-02 00:44:17,820 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 0mS.
+2023-10-02 00:50:47,181 [INFO] Activator:176 - 
+
+
+2023-10-02 00:50:47,184 [INFO] Activator:177 - !SESSION log4j initialized
+2023-10-02 00:50:54,115 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-10-02 00:50:59,611 [ERROR] UserSpecificationFactory:77 - User Specification File corrupted: Module has been uninstalled. osgi.identity; type="osgi.bundle"; version:Version="2.2.200.202302151257"; osgi.identity="com.st.stm32cube.ide.mcu.analytics"; singleton:="true" [id=28]
+2023-10-02 00:52:02,118 [INFO] Activator:176 - 
+
+
+2023-10-02 00:52:02,120 [INFO] Activator:177 - !SESSION log4j initialized
+2023-10-02 00:52:09,178 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-10-02 00:52:36,447 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-10-02 00:52:36,448 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-10-02 00:52:36,453 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
