@@ -1,0 +1,34 @@
+2023-10-02 00:00:37,681 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 567861640 Bytes (974127104)
+2023-10-02 00:00:38,567 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 548253568 Bytes (974127104)
+2023-10-02 00:00:39,443 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 604409288 Bytes (974127104)
+2023-10-02 00:00:39,796 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-02 00:00:39,796 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-02 00:00:39,796 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-02 00:00:39,796 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F1
+2023-10-02 00:00:39,798 [INFO] CodeGenerator:793 - code generatio: config db path: C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\STM32CubeIDE_1.12.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431\\db\
+2023-10-02 00:00:40,153 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\MXTmpFiles\license.tmp_save
+2023-10-02 00:00:40,321 [INFO] CodeEngine:279 - Generated code: C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\MXTmpFiles\license.tmp
+2023-10-02 00:00:40,376 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\MXTmpFiles\gpio.tmp_save
+2023-10-02 00:00:41,051 [INFO] CodeEngine:279 - Generated code: C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\MXTmpFiles\gpio.tmp
+2023-10-02 00:00:41,263 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Src\stm32f1xx_it.c_save
+2023-10-02 00:00:41,453 [INFO] CodeEngine:279 - Generated code: C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Src\stm32f1xx_it.c
+2023-10-02 00:00:41,466 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Inc\stm32f1xx_it.h_save
+2023-10-02 00:00:41,716 [INFO] CodeEngine:279 - Generated code: C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Inc\stm32f1xx_it.h
+2023-10-02 00:00:41,781 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Src\stm32f1xx_hal_msp.c_save
+2023-10-02 00:00:41,905 [INFO] CodeEngine:279 - Generated code: C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Src\stm32f1xx_hal_msp.c
+2023-10-02 00:00:41,916 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\MXTmpFiles\system.tmp_save
+2023-10-02 00:00:41,985 [INFO] CodeEngine:279 - Generated code: C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\MXTmpFiles\system.tmp
+2023-10-02 00:00:42,042 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Inc\stm32f1xx_hal_conf.h_save
+2023-10-02 00:00:42,245 [INFO] CodeEngine:335 - Generated code: C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Inc\stm32f1xx_hal_conf.h
+2023-10-02 00:00:42,282 [WARN] IPConfigManager:3431 - IP not found : TIM
+2023-10-02 00:00:42,284 [WARN] CodeGenerator:3754 - IP not found : null
+2023-10-02 00:00:42,315 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Inc\main.h_save
+2023-10-02 00:00:42,388 [INFO] CodeEngine:279 - Generated code: C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Inc\main.h
+2023-10-02 00:00:42,403 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Src\main.c_save
+2023-10-02 00:00:42,496 [INFO] CodeEngine:279 - Generated code: C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\Core\Src\main.c
+2023-10-02 00:00:43,978 [INFO] ProjectBuilder:2996 - Time for Copy HAL[1] : 266mS.
+2023-10-02 00:00:43,981 [INFO] ProjectBuilder:4304 - Project Generator version: 3.19.2
+2023-10-02 00:00:44,553 [INFO] ConfigFileManager:1483 - The Die is : DIE412
+2023-10-02 00:00:46,692 [INFO] ProjectBuilder:4505 - Time for Generating toolchain IDE Files: 2711mS.
+2023-10-02 00:00:46,694 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 1mS.
+2023-10-02 00:00:46,702 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 1mS.
