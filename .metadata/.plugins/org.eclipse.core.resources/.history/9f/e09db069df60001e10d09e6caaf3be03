@@ -97,7 +97,6 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   setTimer1(1000);
-  setTimer2(500);
   while (1)
   {
 //	HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
@@ -243,36 +242,37 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		switch(status) {
 		  case 0:
 			  update7SEG(0);
+			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 			  status = 1;
-			  setTimer1(250);
+			  setTimer1(500);
 			  break;
 		  case 1:
 			  update7SEG(1);
+			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 			  status = 2;
-			  setTimer1(250);
+			  setTimer1(500);
 			  break;
 		  case 2:
 			  update7SEG(2);
+			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 			  status = 3;
-			  setTimer1(250);
+			  setTimer1(500);
 			  break;
 		  case 3:
 			  update7SEG(3);
+			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 			  status = 4;
-			  setTimer1(250);
+			  setTimer1(500);
 			  break;
 		  case 4:
 			  update7SEG(0);
+			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 			  status = 1;
-			  setTimer1(250);
+			  setTimer1(500);
 			  break;
 		  default:
 			  break;
 		  }
-	}
-	if(flag2 == 1) {
-	  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-	  setTimer2(500);
 	}
 }
 /* USER CODE END 4 */
