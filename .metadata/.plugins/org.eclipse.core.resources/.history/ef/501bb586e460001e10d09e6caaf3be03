@@ -24,12 +24,12 @@ void timerRun() {
 			flag1 = 1;
 		}
 	}
-//	if(timer_counter2 > 0){
-//		timer_counter2--;
-//		if(timer_counter2 <= 0){
-//			flag2 = 1;
-//		}
-//	}
+	if(timer_counter2 > 0){
+		timer_counter2--;
+		if(timer_counter2 <= 0){
+			flag2 = 1;
+		}
+	}
 }
 
 void setTimer2(int duration) {

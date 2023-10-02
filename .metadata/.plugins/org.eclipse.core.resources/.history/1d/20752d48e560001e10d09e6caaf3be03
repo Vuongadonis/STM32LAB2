@@ -96,7 +96,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  setTimer1(10);
+  setTimer1(1);
 //  setTimer2(500);
 //  int hour = 15 , minute = 8 , second = 50;
   while (1)
