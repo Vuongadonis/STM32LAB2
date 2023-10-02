@@ -13,6 +13,9 @@ int timer_counter2 = 0;
 int flag2 = 0;
 int timer_counter0 = 0;
 int flag0 = 0;
+int timer_counter3 = 0;
+int flag3 = 3;
+
 
 void setTimer1(int duration) {
 	timer_counter1 = duration/10;
@@ -38,6 +41,12 @@ void timerRun() {
 			flag2 = 1;
 		}
 	}
+	if(timer_counter3 > 0){
+		timer_counter3--;
+		if(timer_counter3 <= 0){
+			flag3 = 1;
+		}
+	}
 }
 
 void setTimer0(int duration) {
@@ -48,5 +57,10 @@ void setTimer0(int duration) {
 void setTimer2(int duration) {
 	timer_counter2 = duration/10;
 	flag2 = 0;
+}
+
+void setTimer3(int duration) {
+	timer_counter3 = duration/10;
+	flag3 = 0;
 }
 
