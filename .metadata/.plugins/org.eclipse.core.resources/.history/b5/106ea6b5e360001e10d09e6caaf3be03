@@ -98,7 +98,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   setTimer1(1000);
   setTimer2(500);
-  int hour = 15 , minute = 8 , second = 50;
+  int hour = 15 , minute = 3 , second = 50;
   while (1)
   {
 	  second ++;

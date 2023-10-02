@@ -96,8 +96,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  setTimer1(1000);
-  setTimer2(500);
+//  setTimer1(1000);
+//  setTimer2(500);
   int hour = 15 , minute = 8 , second = 50;
   while (1)
   {
@@ -115,8 +115,8 @@ int main(void)
 	  }
 	  updateClockBuffer(minute, hour);
 	  HAL_Delay(1000);
-	HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-	HAL_Delay(1000);
+//	HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+//	HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
