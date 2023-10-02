@@ -160,6 +160,11 @@ int main(void)
 		matrix_count++;
 		if(matrix_count > 7) {
 			matrix_count = 0;
+			cycle_count++;
+			if(cycle_count > 8) {
+				cycle_count = 0;
+			}
+			update_buffer(cycle_count);
 		}
 
 		updateLEDMatrix(matrix_count);

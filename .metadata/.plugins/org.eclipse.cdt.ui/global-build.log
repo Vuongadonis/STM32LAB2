@@ -1,10 +1,7 @@
-23:51:15 **** Incremental Build of configuration Debug for project Lab2_ex ****
+00:18:32 **** Incremental Build of configuration Debug for project Lab2_ex ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/led_matrix.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_matrix.d" -MT"Core/Src/led_matrix.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led_matrix.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/led_matrix.c:13:53: warning: unsigned conversion from 'int' to 'unsigned char' changes value from '3225' to '153' [-Woverflow]
-   13 | uint8_t matrix_buffer[8] = {0xFF, 0x07, 0x03, 0x99, 0xC99, 0x03, 0x07, 0xFF};
-      |                                                     ^~~~~
 arm-none-eabi-gcc -o "Lab2_ex.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Acer\Desktop\DHBK\HK5\VXL\STM32\lab\lab_2\Lab2_ex\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_ex.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Lab2_ex.elf
  
@@ -12,7 +9,7 @@ arm-none-eabi-size   Lab2_ex.elf
 arm-none-eabi-objdump -h -S  Lab2_ex.elf  > "Lab2_ex.list"
 arm-none-eabi-objcopy  -O ihex  Lab2_ex.elf  "Lab2_ex.hex"
    text	   data	    bss	    dec	    hex	filename
-  10120	     48	   1680	  11848	   2e48	Lab2_ex.elf
+  10252	     76	   1684	  12012	   2eec	Lab2_ex.elf
 Finished building: default.size.stdout
  
 Finished building: Lab2_ex.hex

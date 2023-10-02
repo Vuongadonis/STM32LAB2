@@ -1,1 +1,2 @@
-led_matrix.c:18:6:updateLEDMatrix	9
+led_matrix.c:20:6:update_buffer	1
+led_matrix.c:31:6:updateLEDMatrix	9

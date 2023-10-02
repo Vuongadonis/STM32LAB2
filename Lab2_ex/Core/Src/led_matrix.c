@@ -10,9 +10,23 @@
 
 const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
-uint8_t matrix_buffer[8] = {0xFF, 0x07, 0x03, 0x99, 0xC99, 0x03, 0x07, 0xFF};
+uint16_t matrix_buffer[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xCFF, 0xFF, 0xFF, 0xFF};
+
+uint16_t mid_buffer[9] = {0xFF, 0x07, 0x03, 0x99, 0xC99, 0x03, 0x07, 0xFF, 0xFF};
 
 int matrix_count = 0;
+int cycle_count = 0;
+
+void update_buffer(int count) {
+	matrix_buffer[0] = matrix_buffer[1];
+	matrix_buffer[1] = matrix_buffer[2];
+	matrix_buffer[2] = matrix_buffer[3];
+	matrix_buffer[3] = matrix_buffer[4];
+	matrix_buffer[4] = matrix_buffer[5];
+	matrix_buffer[5] = matrix_buffer[6];
+	matrix_buffer[6] = matrix_buffer[7];
+	matrix_buffer[7] = mid_buffer[count];
+}
 
 void updateLEDMatrix(int index){
 
