@@ -96,27 +96,33 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  setTimer0(1000);
   setTimer1(1000);
   setTimer2(500);
-  int hour = 15 , minute = 8 , second = 50;
+  int hour = 15 , minute = 3 , second = 50;
   while (1)
   {
-	  second ++;
-	  if (second >= 60){
-		  second = 0;
-		  minute++;
+	  if(flag0 == 1) {
+		  second ++;
+		  if (second >= 60){
+			  second = 0;
+			  minute++;
+		  }
+		  if(minute >= 60){
+			  minute = 0;
+			  hour++;
+		  }
+		  if(hour >=24){
+			  hour = 0;
+		  }
+		  updateClockBuffer(minute, hour);
+		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+		  setTimer0(1000);
 	  }
-	  if(minute >= 60){
-		  minute = 0;
-		  hour++;
-	  }
-	  if(hour >=24){
-		  hour = 0;
-	  }
-	  updateClockBuffer(minute, hour);
-	  HAL_Delay(1000);
-	HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-	HAL_Delay(1000);
+	if(flag2 == 1) {
+	  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+	  setTimer2(500);
+	}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -284,10 +290,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		  default:
 			  break;
 		  }
-	}
-	if(flag2 == 1) {
-	  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-	  setTimer2(500);
 	}
 }
 /* USER CODE END 4 */
