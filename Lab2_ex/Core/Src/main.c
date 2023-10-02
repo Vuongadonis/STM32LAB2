@@ -119,10 +119,41 @@ int main(void)
 		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 		  setTimer0(1000);
 	  }
-	if(flag2 == 1) {
-	  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-	  setTimer2(500);
-	}
+	  if(flag1 == 1) {
+		switch(status) {
+		  case 0:
+			  update7SEG(0);
+			  status = 1;
+			  setTimer1(250);
+			  break;
+		  case 1:
+			  update7SEG(1);
+			  status = 2;
+			  setTimer1(250);
+			  break;
+		  case 2:
+			  update7SEG(2);
+			  status = 3;
+			  setTimer1(250);
+			  break;
+		  case 3:
+			  update7SEG(3);
+			  status = 4;
+			  setTimer1(250);
+			  break;
+		  case 4:
+			  update7SEG(0);
+			  status = 1;
+			  setTimer1(250);
+			  break;
+		  default:
+			  break;
+		  }
+	  	}
+		if(flag2 == 1) {
+		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+		  setTimer2(500);
+		}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -260,37 +291,6 @@ static void MX_GPIO_Init(void)
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	timerRun();
-	if(flag1 == 1) {
-		switch(status) {
-		  case 0:
-			  update7SEG(0);
-			  status = 1;
-			  setTimer1(250);
-			  break;
-		  case 1:
-			  update7SEG(1);
-			  status = 2;
-			  setTimer1(250);
-			  break;
-		  case 2:
-			  update7SEG(2);
-			  status = 3;
-			  setTimer1(250);
-			  break;
-		  case 3:
-			  update7SEG(3);
-			  status = 4;
-			  setTimer1(250);
-			  break;
-		  case 4:
-			  update7SEG(0);
-			  status = 1;
-			  setTimer1(250);
-			  break;
-		  default:
-			  break;
-		  }
-	}
 }
 /* USER CODE END 4 */
 
