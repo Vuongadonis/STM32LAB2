@@ -241,51 +241,31 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(flag1 == 1) {
 		switch(status) {
 		  case 0:
-			  HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET);
-			  HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
-			  HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
-			  HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
-			  display7SEG(1);
+			  update7SEG(0);
 			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 			  status = 1;
 			  setTimer1(500);
 			  break;
 		  case 1:
-			  HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET);
-			  HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, RESET);
-			  HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
-			  HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
-			  display7SEG(2);
+			  update7SEG(1);
 			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 			  status = 2;
 			  setTimer1(500);
 			  break;
 		  case 2:
-			  HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET);
-			  HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
-			  HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, RESET);
-			  HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
-			  display7SEG(3);
+			  update7SEG(2);
 			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 			  status = 3;
 			  setTimer1(500);
 			  break;
 		  case 3:
-			  HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET);
-			  HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
-			  HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
-			  HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, RESET);
-			  display7SEG(8);
+			  update7SEG(3);
 			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 			  status = 4;
 			  setTimer1(500);
 			  break;
 		  case 4:
-			  HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET);
-			  HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
-			  HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
-			  HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
-			  display7SEG(1);
+			  update7SEG(0);
 			  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 			  status = 1;
 			  setTimer1(500);
