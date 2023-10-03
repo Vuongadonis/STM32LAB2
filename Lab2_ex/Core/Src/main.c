@@ -23,7 +23,6 @@
 /* USER CODE BEGIN Includes */
 #include "softwareTimer.h"
 #include "code7seg.h"
-#include "fsmCode.h"
 #include "led_matrix.h"
 /* USER CODE END Includes */
 
@@ -101,7 +100,14 @@ int main(void)
   setTimer1(1000);
   setTimer2(500);
   setTimer3(100);
-  int hour = 15 , minute = 1 , second = 50;
+
+  int hour = 15 , minute = 30 , second = 50;
+#define INIT 0
+#define LED1 1
+#define LED2 2
+#define LED3 3
+#define LED4 4
+  int status = 0;
   while (1)
   {
 	  if(flag0 == 1) {
@@ -121,37 +127,71 @@ int main(void)
 		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 		  setTimer0(1000);
 	  }
-	  if(flag1 == 1) {
-		switch(status) {
-		  case 0:
-			  update7SEG(0);
-			  status = 1;
-			  setTimer1(250);
-			  break;
-		  case 1:
-			  update7SEG(1);
-			  status = 2;
-			  setTimer1(250);
-			  break;
-		  case 2:
-			  update7SEG(2);
-			  status = 3;
-			  setTimer1(250);
-			  break;
-		  case 3:
-			  update7SEG(3);
-			  status = 4;
-			  setTimer1(250);
-			  break;
-		  case 4:
-			  update7SEG(0);
-			  status = 1;
-			  setTimer1(250);
-			  break;
-		  default:
-			  break;
+	switch( status ) {
+	  case INIT:
+		  if(flag1 == 1) {
+			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 0);
+			update7SEG(0);
+			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
+			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
+			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
+			status = LED1;
+			setTimer1(1000);
 		  }
-	}
+		  break;
+	  case LED1:
+		  if(flag1 == 1) {
+			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
+			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 0);
+			update7SEG(1);
+			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
+			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
+			status = LED2;
+			setTimer1(1000);
+		  }
+		  break;
+	  case LED2:
+		  if(flag1 == 1) {
+			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
+			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
+			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 0);
+			update7SEG(2);
+			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
+			status = LED3;
+			setTimer1(1000);
+
+		  }
+		  break;
+	  case LED3:
+		  if(flag1 == 1) {
+			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
+			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
+			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
+			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 0);
+			update7SEG(3);
+			status = LED4;
+			setTimer1(1000);
+		  }
+		  break;
+	  case LED4:
+		  if(flag1 == 1) {
+			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 0);
+			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
+			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
+			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
+			update7SEG(0);
+			status = LED1;
+			setTimer1(1000);
+		  }
+		  break;
+	  default:
+		HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 0);
+		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
+		HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
+		HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
+		  break;
+	  }
+
 	if(flag2 == 1) {
 	  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 	  setTimer2(500);
@@ -166,7 +206,6 @@ int main(void)
 			}
 			update_buffer(cycle_count);
 		}
-
 		updateLEDMatrix(matrix_count);
 		setTimer3(50);
 	}
@@ -316,7 +355,8 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+int EN = 0;
+int counter = 50;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	timerRun();
 }
