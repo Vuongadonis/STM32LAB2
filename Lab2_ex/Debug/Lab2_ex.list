@@ -1385,10 +1385,10 @@ int main(void)
  8000ac4:	2064      	movs	r0, #100	; 0x64
  8000ac6:	f000 faf7 	bl	80010b8 <setTimer3>
 
-  int hour = 15 , minute = 30 , second = 50;
+  int hour = 15 , minute = 1 , second = 50;
  8000aca:	230f      	movs	r3, #15
  8000acc:	60fb      	str	r3, [r7, #12]
- 8000ace:	231e      	movs	r3, #30
+ 8000ace:	2301      	movs	r3, #1
  8000ad0:	60bb      	str	r3, [r7, #8]
  8000ad2:	2332      	movs	r3, #50	; 0x32
  8000ad4:	607b      	str	r3, [r7, #4]
@@ -1477,24 +1477,24 @@ int main(void)
  8000b58:	2140      	movs	r1, #64	; 0x40
  8000b5a:	4885      	ldr	r0, [pc, #532]	; (8000d70 <main+0x2e0>)
  8000b5c:	f000 fe58 	bl	8001810 <HAL_GPIO_WritePin>
-			update7SEG(0);
- 8000b60:	2000      	movs	r0, #0
- 8000b62:	f7ff fcd9 	bl	8000518 <update7SEG>
 			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
- 8000b66:	2201      	movs	r2, #1
- 8000b68:	2180      	movs	r1, #128	; 0x80
- 8000b6a:	4881      	ldr	r0, [pc, #516]	; (8000d70 <main+0x2e0>)
- 8000b6c:	f000 fe50 	bl	8001810 <HAL_GPIO_WritePin>
+ 8000b60:	2201      	movs	r2, #1
+ 8000b62:	2180      	movs	r1, #128	; 0x80
+ 8000b64:	4882      	ldr	r0, [pc, #520]	; (8000d70 <main+0x2e0>)
+ 8000b66:	f000 fe53 	bl	8001810 <HAL_GPIO_WritePin>
 			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
- 8000b70:	2201      	movs	r2, #1
- 8000b72:	f44f 7180 	mov.w	r1, #256	; 0x100
- 8000b76:	487e      	ldr	r0, [pc, #504]	; (8000d70 <main+0x2e0>)
- 8000b78:	f000 fe4a 	bl	8001810 <HAL_GPIO_WritePin>
+ 8000b6a:	2201      	movs	r2, #1
+ 8000b6c:	f44f 7180 	mov.w	r1, #256	; 0x100
+ 8000b70:	487f      	ldr	r0, [pc, #508]	; (8000d70 <main+0x2e0>)
+ 8000b72:	f000 fe4d 	bl	8001810 <HAL_GPIO_WritePin>
 			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
- 8000b7c:	2201      	movs	r2, #1
- 8000b7e:	f44f 7100 	mov.w	r1, #512	; 0x200
- 8000b82:	487b      	ldr	r0, [pc, #492]	; (8000d70 <main+0x2e0>)
- 8000b84:	f000 fe44 	bl	8001810 <HAL_GPIO_WritePin>
+ 8000b76:	2201      	movs	r2, #1
+ 8000b78:	f44f 7100 	mov.w	r1, #512	; 0x200
+ 8000b7c:	487c      	ldr	r0, [pc, #496]	; (8000d70 <main+0x2e0>)
+ 8000b7e:	f000 fe47 	bl	8001810 <HAL_GPIO_WritePin>
+			update7SEG(0);
+ 8000b82:	2000      	movs	r0, #0
+ 8000b84:	f7ff fcc8 	bl	8000518 <update7SEG>
 			status = LED1;
  8000b88:	2301      	movs	r3, #1
  8000b8a:	603b      	str	r3, [r7, #0]
@@ -1520,19 +1520,19 @@ int main(void)
  8000bac:	2180      	movs	r1, #128	; 0x80
  8000bae:	4870      	ldr	r0, [pc, #448]	; (8000d70 <main+0x2e0>)
  8000bb0:	f000 fe2e 	bl	8001810 <HAL_GPIO_WritePin>
-			update7SEG(1);
- 8000bb4:	2001      	movs	r0, #1
- 8000bb6:	f7ff fcaf 	bl	8000518 <update7SEG>
 			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
- 8000bba:	2201      	movs	r2, #1
- 8000bbc:	f44f 7180 	mov.w	r1, #256	; 0x100
- 8000bc0:	486b      	ldr	r0, [pc, #428]	; (8000d70 <main+0x2e0>)
- 8000bc2:	f000 fe25 	bl	8001810 <HAL_GPIO_WritePin>
+ 8000bb4:	2201      	movs	r2, #1
+ 8000bb6:	f44f 7180 	mov.w	r1, #256	; 0x100
+ 8000bba:	486d      	ldr	r0, [pc, #436]	; (8000d70 <main+0x2e0>)
+ 8000bbc:	f000 fe28 	bl	8001810 <HAL_GPIO_WritePin>
 			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
- 8000bc6:	2201      	movs	r2, #1
- 8000bc8:	f44f 7100 	mov.w	r1, #512	; 0x200
- 8000bcc:	4868      	ldr	r0, [pc, #416]	; (8000d70 <main+0x2e0>)
- 8000bce:	f000 fe1f 	bl	8001810 <HAL_GPIO_WritePin>
+ 8000bc0:	2201      	movs	r2, #1
+ 8000bc2:	f44f 7100 	mov.w	r1, #512	; 0x200
+ 8000bc6:	486a      	ldr	r0, [pc, #424]	; (8000d70 <main+0x2e0>)
+ 8000bc8:	f000 fe22 	bl	8001810 <HAL_GPIO_WritePin>
+			update7SEG(1);
+ 8000bcc:	2001      	movs	r0, #1
+ 8000bce:	f7ff fca3 	bl	8000518 <update7SEG>
 			status = LED2;
  8000bd2:	2302      	movs	r3, #2
  8000bd4:	603b      	str	r3, [r7, #0]
@@ -1563,14 +1563,14 @@ int main(void)
  8000c00:	f44f 7180 	mov.w	r1, #256	; 0x100
  8000c04:	485a      	ldr	r0, [pc, #360]	; (8000d70 <main+0x2e0>)
  8000c06:	f000 fe03 	bl	8001810 <HAL_GPIO_WritePin>
-			update7SEG(2);
- 8000c0a:	2002      	movs	r0, #2
- 8000c0c:	f7ff fc84 	bl	8000518 <update7SEG>
 			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
- 8000c10:	2201      	movs	r2, #1
- 8000c12:	f44f 7100 	mov.w	r1, #512	; 0x200
- 8000c16:	4856      	ldr	r0, [pc, #344]	; (8000d70 <main+0x2e0>)
- 8000c18:	f000 fdfa 	bl	8001810 <HAL_GPIO_WritePin>
+ 8000c0a:	2201      	movs	r2, #1
+ 8000c0c:	f44f 7100 	mov.w	r1, #512	; 0x200
+ 8000c10:	4857      	ldr	r0, [pc, #348]	; (8000d70 <main+0x2e0>)
+ 8000c12:	f000 fdfd 	bl	8001810 <HAL_GPIO_WritePin>
+			update7SEG(2);
+ 8000c16:	2002      	movs	r0, #2
+ 8000c18:	f7ff fc7e 	bl	8000518 <update7SEG>
 			status = LED3;
  8000c1c:	2303      	movs	r3, #3
  8000c1e:	603b      	str	r3, [r7, #0]

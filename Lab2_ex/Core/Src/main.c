@@ -101,7 +101,7 @@ int main(void)
   setTimer2(500);
   setTimer3(100);
 
-  int hour = 15 , minute = 30 , second = 50;
+  int hour = 15 , minute = 1 , second = 50;
 #define INIT 0
 #define LED1 1
 #define LED2 2
@@ -131,10 +131,10 @@ int main(void)
 	  case INIT:
 		  if(flag1 == 1) {
 			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 0);
-			update7SEG(0);
 			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
 			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
 			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
+			update7SEG(0);
 			status = LED1;
 			setTimer1(1000);
 		  }
@@ -143,9 +143,9 @@ int main(void)
 		  if(flag1 == 1) {
 			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
 			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 0);
-			update7SEG(1);
 			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
 			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
+			update7SEG(1);
 			status = LED2;
 			setTimer1(1000);
 		  }
@@ -155,8 +155,8 @@ int main(void)
 			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
 			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
 			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 0);
-			update7SEG(2);
 			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
+			update7SEG(2);
 			status = LED3;
 			setTimer1(1000);
 
