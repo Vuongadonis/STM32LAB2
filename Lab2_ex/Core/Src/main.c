@@ -101,7 +101,7 @@ int main(void)
   setTimer2(500);
   setTimer3(100);
 
-  int hour = 15 , minute = 1 , second = 50;
+  int hour = 15 , minute = 8 , second = 50;
 #define INIT 0
 #define LED1 1
 #define LED2 2

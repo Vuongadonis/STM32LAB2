@@ -1385,10 +1385,10 @@ int main(void)
  8000ac4:	2064      	movs	r0, #100	; 0x64
  8000ac6:	f000 faf7 	bl	80010b8 <setTimer3>
 
-  int hour = 15 , minute = 1 , second = 50;
+  int hour = 15 , minute = 8 , second = 50;
  8000aca:	230f      	movs	r3, #15
  8000acc:	60fb      	str	r3, [r7, #12]
- 8000ace:	2301      	movs	r3, #1
+ 8000ace:	2308      	movs	r3, #8
  8000ad0:	60bb      	str	r3, [r7, #8]
  8000ad2:	2332      	movs	r3, #50	; 0x32
  8000ad4:	607b      	str	r3, [r7, #4]
