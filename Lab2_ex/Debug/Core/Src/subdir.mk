@@ -9,6 +9,7 @@ C_SRCS += \
 ../Core/Src/fsmCode.c \
 ../Core/Src/led_matrix.c \
 ../Core/Src/main.c \
+../Core/Src/matrix_hex.c \
 ../Core/Src/softwareTimer.c \
 ../Core/Src/stm32f1xx_hal_msp.c \
 ../Core/Src/stm32f1xx_it.c \
@@ -21,6 +22,7 @@ OBJS += \
 ./Core/Src/fsmCode.o \
 ./Core/Src/led_matrix.o \
 ./Core/Src/main.o \
+./Core/Src/matrix_hex.o \
 ./Core/Src/softwareTimer.o \
 ./Core/Src/stm32f1xx_hal_msp.o \
 ./Core/Src/stm32f1xx_it.o \
@@ -33,6 +35,7 @@ C_DEPS += \
 ./Core/Src/fsmCode.d \
 ./Core/Src/led_matrix.d \
 ./Core/Src/main.d \
+./Core/Src/matrix_hex.d \
 ./Core/Src/softwareTimer.d \
 ./Core/Src/stm32f1xx_hal_msp.d \
 ./Core/Src/stm32f1xx_it.d \
@@ -48,7 +51,7 @@ Core/Src/%.o Core/Src/%.su Core/Src/%.cyclo: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/code7seg.cyclo ./Core/Src/code7seg.d ./Core/Src/code7seg.o ./Core/Src/code7seg.su ./Core/Src/fsmCode.cyclo ./Core/Src/fsmCode.d ./Core/Src/fsmCode.o ./Core/Src/fsmCode.su ./Core/Src/led_matrix.cyclo ./Core/Src/led_matrix.d ./Core/Src/led_matrix.o ./Core/Src/led_matrix.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/softwareTimer.cyclo ./Core/Src/softwareTimer.d ./Core/Src/softwareTimer.o ./Core/Src/softwareTimer.su ./Core/Src/stm32f1xx_hal_msp.cyclo ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.cyclo ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.cyclo ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su
+	-$(RM) ./Core/Src/code7seg.cyclo ./Core/Src/code7seg.d ./Core/Src/code7seg.o ./Core/Src/code7seg.su ./Core/Src/fsmCode.cyclo ./Core/Src/fsmCode.d ./Core/Src/fsmCode.o ./Core/Src/fsmCode.su ./Core/Src/led_matrix.cyclo ./Core/Src/led_matrix.d ./Core/Src/led_matrix.o ./Core/Src/led_matrix.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/matrix_hex.cyclo ./Core/Src/matrix_hex.d ./Core/Src/matrix_hex.o ./Core/Src/matrix_hex.su ./Core/Src/softwareTimer.cyclo ./Core/Src/softwareTimer.d ./Core/Src/softwareTimer.o ./Core/Src/softwareTimer.su ./Core/Src/stm32f1xx_hal_msp.cyclo ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.cyclo ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.cyclo ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su
 
 .PHONY: clean-Core-2f-Src
 

@@ -204,7 +204,7 @@ int main(void)
 			if(cycle_count > 8) {
 				cycle_count = 0;
 			}
-			update_buffer(cycle_count);
+			update_buffer_to_right(cycle_count);
 		}
 		updateLEDMatrix(matrix_count);
 		setTimer3(50);

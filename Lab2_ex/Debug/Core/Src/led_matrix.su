@@ -1,2 +1,3 @@
-../Core/Src/led_matrix.c:20:6:update_buffer	16	static
-../Core/Src/led_matrix.c:31:6:updateLEDMatrix	16	static
+../Core/Src/led_matrix.c:26:6:update_buffer	16	static
+../Core/Src/led_matrix.c:38:6:update_buffer_to_right	16	static
+../Core/Src/led_matrix.c:50:6:updateLEDMatrix	16	static

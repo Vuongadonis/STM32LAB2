@@ -1,0 +1,12 @@
+/*
+ * matrix_hex.c
+ *
+ *  Created on: Oct 5, 2023
+ *      Author: Acer
+ */
+
+#include "matrix_hex.h"
+
+//void chu_A() {
+//	mid_buffer[9]
+//}
