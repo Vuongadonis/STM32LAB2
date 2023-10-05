@@ -99,7 +99,7 @@ int main(void)
   setTimer0(1000);
   setTimer1(1000);
   setTimer2(500);
-  int hour = 15 , minute = 3 , second = 50;
+  int hour = 15 , minute = 8 , second = 50;
   while (1)
   {
 	  if(flag0 == 1) {

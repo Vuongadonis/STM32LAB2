@@ -879,10 +879,10 @@ int main(void)
   setTimer2(500);
  80006d4:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
  80006d8:	f000 f9f8 	bl	8000acc <setTimer2>
-  int hour = 15 , minute = 3 , second = 50;
+  int hour = 15 , minute = 8 , second = 50;
  80006dc:	230f      	movs	r3, #15
  80006de:	60fb      	str	r3, [r7, #12]
- 80006e0:	2303      	movs	r3, #3
+ 80006e0:	2308      	movs	r3, #8
  80006e2:	60bb      	str	r3, [r7, #8]
  80006e4:	2332      	movs	r3, #50	; 0x32
  80006e6:	607b      	str	r3, [r7, #4]
