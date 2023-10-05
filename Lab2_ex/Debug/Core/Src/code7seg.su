@@ -9,5 +9,3 @@
 ../Core/Src/code7seg.c:83:6:led7seg_8	8	static
 ../Core/Src/code7seg.c:92:6:led7seg_9	8	static
 ../Core/Src/code7seg.c:102:6:display7SEG	16	static
-../Core/Src/code7seg.c:142:6:update7SEG	16	static
-../Core/Src/code7seg.c:166:6:updateClockBuffer	16	static
