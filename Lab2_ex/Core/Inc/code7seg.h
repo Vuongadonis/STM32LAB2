@@ -9,7 +9,5 @@
 #define INC_CODE7SEG_H_
 
 void display7SEG(int num);
-void update7SEG(int index);
-void updateClockBuffer(int minute, int hour);
 
 #endif /* INC_CODE7SEG_H_ */
