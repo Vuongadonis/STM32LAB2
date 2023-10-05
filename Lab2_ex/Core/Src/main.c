@@ -101,7 +101,7 @@ int main(void)
   setTimer1(1000);
   setTimer2(500);
   setTimer3(100);
-  int hour = 15 , minute = 1 , second = 50;
+  int hour = 15 , minute = 8 , second = 50;
   while (1)
   {
 	  if(flag0 == 1) {
